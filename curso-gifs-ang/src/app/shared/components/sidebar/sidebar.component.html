@@ -4,6 +4,10 @@
   <hr class="text-light">
 
   <div class="list-group list-reset">
-    <button class="list-group-item list-group-item-action">Mario Bros</button>
+    <button class="list-group-item list-group-item-action"
+            *ngFor="let gifs of gifsHistory"
+            (click)="btnGifsHistory(gifs)">
+      {{gifs | titlecase}}
+    </button>
   </div>
 </div>
