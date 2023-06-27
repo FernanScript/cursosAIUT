@@ -1,12 +1,18 @@
 import { Country } from "./country";
+import { Region } from "./region.type";
 
 export interface CacheStore {
-  byCapital : TermCountries;
-  byCountries : TermCountries;
-
+  byCapital   : TermCountries;
+  byCountry : TermCountries;
+  byRegion    : RegionContries;
 }
 
 export interface TermCountries {
-  term : string;
+  term      : string;
   countries : Country[]
+}
+
+export interface RegionContries {
+  region   ?: Region;
+  countries : Country[];
 }
